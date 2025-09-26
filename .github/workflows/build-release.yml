@@ -27,5 +27,5 @@ jobs:
     - name: Upload files
       uses: actions/upload-artifact@v4
       with:
-        name: Release
+        name: ccp_1_0_0
         path: ccp/bin/Release/net8.0/
