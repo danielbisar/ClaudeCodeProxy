@@ -2,6 +2,8 @@
 
 A reverse proxy server built with ASP.NET Core and YARP (Yet Another Reverse Proxy) that forwards requests to the Anthropic API with request/response logging capabilities.
 
+[![.NET](https://github.com/danielbisar/ClaudeCodeProxy/actions/workflows/dotnet.yml/badge.svg)](https://github.com/danielbisar/ClaudeCodeProxy/actions/workflows/dotnet.yml)
+
 ## Features
 
 - **Reverse Proxy**: Forwards all incoming requests to `https://api.anthropic.com/`
