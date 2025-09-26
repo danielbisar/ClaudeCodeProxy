@@ -87,4 +87,4 @@ This logging can be helpful for debugging API interactions and monitoring traffi
 
 # License
 
-See [LICENSE.md]
+See [LICENSE.md](LICENSE.md)
