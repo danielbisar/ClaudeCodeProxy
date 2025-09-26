@@ -8,7 +8,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a9d76ce2-04dd-4729-8e80-0846050d5af0" name="Changes" comment="" />
+    <list default="true" id="a9d76ce2-04dd-4729-8e80-0846050d5af0" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/ccp/request.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ClaudeCodeProxy/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ClaudeCodeProxy/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClaudeCodeProxy.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/ClaudeCodeProxy.sln.DotSettings.user" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ccp/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ccp/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ccp/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ccp/appsettings.json" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -23,7 +29,10 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/410fc7fcd76d4a3ba04687eb811a36404a400/c7/6aaaade4/UseMiddlewareExtensions.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/7ebef00a407b42c3b96aac2cf6f829c02c800/b6/726ec6cb/HttpLoggingMiddleware.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/7ebef00a407b42c3b96aac2cf6f829c02c800/ba/a3e49fc4/HttpLoggingOptions.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/7ebef00a407b42c3b96aac2cf6f829c02c800/c9/e1affb8e/HttpLoggingBuilderExtensions.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/bf3f51607a3e4e76b5b91640cd7409195c430/13/8595a157/ReverseProxyServiceCollectionExtensions.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f9058cd9a3a44862853b625f9283c4cb31000/5f/037cbda7/HeaderNames.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
@@ -40,6 +49,7 @@
   "keyToString": {
     ".NET Launch Settings Profile.ccp: http.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "master",
     "node.js.detected.package.eslint": "true",
@@ -93,7 +103,8 @@
       <option name="presentableId" value="Default" />
       <updated>1758909882999</updated>
       <workItem from="1758909884662" duration="347000" />
-      <workItem from="1758910593859" duration="1486000" />
+      <workItem from="1758910593859" duration="4686000" />
+      <workItem from="1758915808487" duration="1375000" />
     </task>
     <servers />
   </component>

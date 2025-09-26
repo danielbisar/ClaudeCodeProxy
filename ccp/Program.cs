@@ -1,34 +1,41 @@
 using Microsoft.AspNetCore.HttpLogging;
 using Microsoft.Extensions.Compliance.Redaction;
 using Microsoft.Extensions.Http.Diagnostics;
+using Microsoft.Net.Http.Headers;
+
+using Yarp.ReverseProxy.Transforms;
 
 var builder = WebApplication.CreateBuilder(args);
 var services = builder.Services;
 
-services.AddSingleton<IRedactorProvider, NullRedactorProvider>();
-services.AddHttpLogging(o =>
-    {
-        o.LoggingFields = HttpLoggingFields.All;
-        // o.RequestHeaders.Add("x-ms-client-request-id");
-        // o.ResponseHeaders.Add("x-ms-request-id");
-        // o.ResponseHeaders.Add("x-ms-correlation-request-id");
-        o.RequestBodyLogLimit = 4096 * 4096;
-        o.ResponseBodyLogLimit = 4096 * 4096;
-    }
-);
-services.AddHttpLoggingRedaction(options =>
-{
-    options.RequestHeadersDataClasses.Clear();
-    options.ResponseHeadersDataClasses.Clear();
-    options.RouteParameterDataClasses.Clear();
-    options.RequestPathParameterRedactionMode = HttpRouteParameterRedactionMode.None;
-});
+services.AddReverseProxy()
+        .LoadFromConfig(builder.Configuration.GetSection("ReverseProxy"))
+        .AddTransforms(context =>
+            {
+                context.AddRequestTransform(async rt =>
+                    {
+                        var request = rt.ProxyRequest;
+                        Console.WriteLine("==== request ====");
+                        Console.WriteLine(request.Method);
+                        Console.WriteLine(request);
+                        Console.WriteLine(await request.Content?.ReadAsStringAsync());
+                    }
+                );
 
-services.AddReverseProxy().LoadFromConfig(builder.Configuration.GetSection("ReverseProxy"));
+                context.AddResponseTransform(async rt =>
+                    {
+                        var response = rt.ProxyResponse;
+                        Console.WriteLine("==== response ====");
+                        Console.WriteLine(response);
+                        Console.WriteLine(await response?.Content?.ReadAsStringAsync());
+                    }
+                );
+            }
+        );
 
 
 var app = builder.Build();
-app.UseHttpLogging();
+// app.UseHttpLogging();
 app.UseRouting();
 app.MapReverseProxy();
 
