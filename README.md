@@ -85,3 +85,6 @@ The application includes request and response transform middleware that logs:
 
 This logging can be helpful for debugging API interactions and monitoring traffic flow.
 
+# License
+
+See [LICENSE.md]
